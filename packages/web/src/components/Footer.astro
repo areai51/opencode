@@ -17,24 +17,30 @@ const discord = config.social?.find((item) => item.icon === "discord")
     <footer class="doc">
       <div class="meta sl-flex">
         <div>
-          {editUrl && (
-            <a href={editUrl} target="_blank" rel="noopener noreferrer" class="sl-flex">
-              <Icon name="pencil" size="1em" />
-              {Astro.locals.t("page.editLink")}
-            </a>
-          )}
-          {github && (
-            <a href={`${github.href}/issues/new`} target="_blank" rel="noopener noreferrer" class="sl-flex">
-              <Icon name={github.icon} size="1em" />
-              {issueLink}
-            </a>
-          )}
-          {discord && (
-            <a href={discord.href} target="_blank" rel="noopener noreferrer" class="sl-flex">
-              <Icon name={discord.icon} size="1em" />
-              {discordLink}
-            </a>
-          )}
+          {
+            editUrl && (
+              <a href={editUrl} target="_blank" rel="noopener noreferrer" class="sl-flex">
+                <Icon name="pencil" size="1em" />
+                {Astro.locals.t("page.editLink")}
+              </a>
+            )
+          }
+          {
+            github && (
+              <a href={`${github.href}/issues/new`} target="_blank" rel="noopener noreferrer" class="sl-flex">
+                <Icon name={github.icon} size="1em" />
+                {issueLink}
+              </a>
+            )
+          }
+          {
+            discord && (
+              <a href={discord.href} target="_blank" rel="noopener noreferrer" class="sl-flex">
+                <Icon name="discord.icon} />
+                {discordLink}
+              </a>
+            )
+          }
           <LanguageSelect client:load />
         </div>
         <div>
